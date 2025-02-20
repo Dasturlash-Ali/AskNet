@@ -11,6 +11,12 @@ import { BotModule } from './bot/bot.module';
 import { ClientModule } from './client/client.module';
 import { SurveysModule } from './surveys/surveys.module';
 import { BOT_NAME } from './app.constants';
+import { StatisticsModule } from './statistics/statistics.module';
+import { QuestionsModule } from './questions/questions.module';
+import { ResponsesModule } from './responses/responses.module';
+import { AnswerOptionsModule } from './answer_options/answer_options.module';
+import { PaymentsModule } from './payments/payments.module';
+import { SurveyStatusModule } from './survey_status/survey_status.module';
 
 @Module({
   imports: [
@@ -30,6 +36,12 @@ import { BOT_NAME } from './app.constants';
     BotModule,
     ClientModule,
     SurveysModule,
+    StatisticsModule,
+    QuestionsModule,
+    ResponsesModule,
+    AnswerOptionsModule,
+    PaymentsModule,
+    SurveyStatusModule,
   ],
   controllers: [],
   providers: [],
