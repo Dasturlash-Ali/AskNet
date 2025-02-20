@@ -18,14 +18,14 @@ export class OwnerService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} owner`;
+    return this.ownerModel.findOne({id});
   }
 
   update(id: number, updateOwnerDto: UpdateOwnerDto) {
-    return `This action updates a #${id} owner`;
+    return this.ownerModel.findByIdAndUpdate({id}, updateOwnerDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} owner`;
+    return this.ownerModel.findByIdAndDelete({id});
   }
 }

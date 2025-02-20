@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-import mongoose, { HydratedDocument } from "mongoose";
+import mongoose, { Document, HydratedDocument } from "mongoose";
 import { Client } from "src/client/schemas/client.schema";
 
 export type SurveysDocument = HydratedDocument<Survey>;
@@ -25,6 +25,7 @@ export class Survey {
     ],
   })
   clients: Client[];
+  static schema: any;
 }
 
 export const SurveySchema = SchemaFactory.createForClass(Survey);
